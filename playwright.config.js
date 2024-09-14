@@ -29,6 +29,9 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    headless: true,  // Set to false if you want to see browser execution
+    baseURL: 'https://demoblaze.com/',
+    video: 'on-first-retry',  // Capture video on first test retry
   },
 
   /* Configure projects for major browsers */
@@ -47,6 +50,8 @@ module.exports = defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+   
+    
 
     /* Test against mobile viewports. */
     // {
@@ -75,5 +80,6 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+  
 });
 
