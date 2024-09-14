@@ -45,28 +45,28 @@ Make sure you have **Node.js** installed. You can download it [here](https://nod
 6. 📊 Reports and Video
   After test execution, an HTML report is generated in the playwright-report folder. To view the report:
     ```bash
-  npx playwright show-report
+    npx playwright show-report
 
 
 7. 🧪 Running Tests in CI/CD
 This project is configured to run tests in headless mode in CI/CD pipelines. To integrate with GitHub Actions, you can create a workflow in .github/workflows/playwright yml:
-```bash
-  name: Playwright Tests
+    ```bash
+      name: Playwright Tests
 
-  on:
-    push:
-      branches:
-        - main
+      on:
+        push:
+          branches:
+            - main
 
-  jobs:
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: Install dependencies
-          run: npm install
-        - name: Run Playwright tests
-          run: npx playwright test
+      jobs:
+        test:
+          runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v2
+            - name: Install dependencies
+              run: npm install
+            - name: Run Playwright tests
+              run: npx playwright test
 
 📝 License
 This project is licensed under the MIT License. See the LICENSE file for details.
