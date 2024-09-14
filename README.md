@@ -52,27 +52,26 @@ Video recordings of failed tests will be saved in the videos/ directory.
 🧪 Running Tests in CI/CD
 This project is configured to run tests in headless mode in CI/CD pipelines. To integrate with GitHub Actions, you can create a workflow in .github/workflows/playwright.yml:
 
-yaml
-Copy code
-name: Playwright Tests
+```bash
+  yaml
+  Copy code
+  name: Playwright Tests
 
-on:
-  push:
-    branches:
-      - main
+  on:
+    push:
+      branches:
+        - main
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
-      - name: Run Playwright tests
-        run: npx playwright test
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Install dependencies
+          run: npm install
+        - name: Run Playwright tests
+          run: npx playwright test
 
 📝 License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
----
 
