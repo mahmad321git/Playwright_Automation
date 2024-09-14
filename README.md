@@ -36,6 +36,7 @@ Make sure you have **Node.js** installed. You can download it [here](https://nod
     npx playwright test
 
 5. You can also run individual test files:
+    ```bash
     npx playwright test tests/signup.spec.js
     npx playwright test tests/login.spec.js
     npx playwright test tests/cart.spec.js
