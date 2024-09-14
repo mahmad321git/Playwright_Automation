@@ -42,17 +42,14 @@ Make sure you have **Node.js** installed. You can download it [here](https://nod
     npx playwright test tests/cart.spec.js
 
 
-📊 Reports and Video
+6. 📊 Reports and Video
   After test execution, an HTML report is generated in the playwright-report folder. To view the report:
-
-```bash
-  Copy code
+    ```bash
   npx playwright show-report
-  Video recordings of failed tests will be saved in the videos/ directory.
 
-🧪 Running Tests in CI/CD
-This project is configured to run tests in headless mode in CI/CD pipelines. To integrate with GitHub Actions, you can create a workflow in .github/workflows/playwright.yml:
 
+7. 🧪 Running Tests in CI/CD
+This project is configured to run tests in headless mode in CI/CD pipelines. To integrate with GitHub Actions, you can create a workflow in .github/workflows/playwright yml:
 ```bash
   name: Playwright Tests
 
