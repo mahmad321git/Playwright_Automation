@@ -30,12 +30,12 @@ Make sure you have **Node.js** installed. You can download it [here](https://nod
     ```bash
     npm install
 
-Running the Tests
+4. Running the Tests
     To run all the tests, simply use:
     ```bash
     npx playwright test
 
-You can also run individual test files:
+5. You can also run individual test files:
     npx playwright test tests/signup.spec.js
     npx playwright test tests/login.spec.js
     npx playwright test tests/cart.spec.js
